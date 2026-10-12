@@ -54,7 +54,7 @@
     "publish": [
       {
         "provider": "github",
-        "owner": "Spiky03",
+        "owner": "cichester",
         "repo": "Caelix_Desktop"
       }
     ],
