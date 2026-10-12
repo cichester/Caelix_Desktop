@@ -25,23 +25,27 @@ autoUpdater.on('update-not-available', () => {
     });
 });
 
-autoUpdater.on('update-available', () => {
+autoUpdater.on('update-available', (info) => {
     isManualCheck = false;
+    dialog.showMessageBox({
+        type: 'info',
+        title: 'Aggiornamento Rilevato',
+        message: `È disponibile la nuova versione v${info.version}`,
+        detail: "Download dell'aggiornamento in corso in background...",
+        buttons: ['OK'],
+    });
 });
 
 autoUpdater.on('update-downloaded', (info) => {
     dialog.showMessageBox({
         type: 'info',
-        title: 'Aggiornamento Disponibile',
-        message: `Versione ${info.version} pronta all'installazione`,
-        detail: "L'aggiornamento è stato scaricato in background. Vuoi riavviare l'applicazione ora per applicarlo?",
-        buttons: ['Riavvia ora', 'Più tardi'],
-        defaultId: 0,
-        cancelId: 1,
-    }).then(({ response }) => {
-        if (response === 0) {
-            autoUpdater.quitAndInstall();
-        }
+        title: 'Aggiornamento Obbligatorio',
+        message: `Versione v${info.version} pronta all'installazione`,
+        detail: "Per garantire la piena compatibilità con i server di Caelix, l'aggiornamento è obbligatorio. L'app verrà ora riavviata.",
+        buttons: ['Riavvia e Aggiorna Ora'],
+        noLink: true,
+    }).then(() => {
+        autoUpdater.quitAndInstall();
     });
 });
 
@@ -267,12 +271,15 @@ export const buildMenu = (): void => {
         {
             role: 'help',
             submenu: [
+                versionItem,
+                checkForUpdates,
+                { type: 'separator' },
+                ...(stableChannel && betaChannel ? [stableChannel, betaChannel, { type: 'separator' }] : []),
                 {
-                    label: 'Learn More',
+                    label: 'Sito ufficiale',
                     click: async () => {
                         await shell.openExternal('https://caelix.it');
                     },
-
                 },
             ],
         },

@@ -20,7 +20,7 @@ const isDevelopment = import.meta.env.DEV;
 
 // Shared window configuration
 const TITLE_BAR_STYLE = platform() === 'darwin' ? 'hidden' : 'default';
-const AUTO_HIDE_MENU_BAR = true;
+const AUTO_HIDE_MENU_BAR = false;
 const WINDOW_BACKGROUND_COLOR = '#0C0B10';
 
 
