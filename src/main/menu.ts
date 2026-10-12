@@ -45,7 +45,7 @@ autoUpdater.on('update-downloaded', (info) => {
         buttons: ['Riavvia e Aggiorna Ora'],
         noLink: true,
     }).then(() => {
-        autoUpdater.quitAndInstall();
+        autoUpdater.quitAndInstall(true, true);
     });
 });
 
