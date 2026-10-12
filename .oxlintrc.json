@@ -13,12 +13,11 @@
     "ignorePatterns": [
         "node_modules",
         "out",
+        "dist-package",
         "build",
         "electron-builder-dist",
         "**/*.d.ts",
-        "sign.js",
-        "electron.vite.config.js",
-        "scripts/**"
+        "electron.vite.config.js"
     ],
     "rules": {
         "typescript/no-empty-interface": "off",
