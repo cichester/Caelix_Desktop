@@ -200,7 +200,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Added
 
--   Added Discord rich presence. When the desktop app is running, your Discord rich presence status will display Playing **Alchemy**, and the duration and app icon displayed on hover. When you launch a game, your status will be updated to include In Game along with the name of the game you're in.
+-   Added Discord rich presence. When the desktop app is running, your Discord rich presence status will display Playing **Caelix**, and the duration and app icon displayed on hover. When you launch a game, your status will be updated to include In Game along with the name of the game you're in.
 
 ## [0.6.0] - 2021-08-07
 
@@ -213,7 +213,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Added
 
 -   Added Check for Updates menu item to check for updates.
--   Added Learn More item to Help menu. It opens alchemyrpg.com when clicked.
+-   Added Learn More item to Help menu. It opens caelix.it when clicked.
 
 ## [0.4.1] - 2021-08-04
 

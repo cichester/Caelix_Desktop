@@ -4,13 +4,12 @@
 # while staying on infrastructure we control. Safe to run repeatedly: it is a
 # no-op when the verified jar is already present.
 #
-# When bumping jsign, update JSIGN_VERSION + JSIGN_SHA256 here and in sign.js,
-# and upload the new jar to s3://alchemyrpg-user-uploads/build-tools/.
+# When bumping jsign, update JSIGN_VERSION + JSIGN_SHA256 here and in sign.js.
 set -e
 
 JSIGN_VERSION=7.4
 JSIGN_SHA256=2abf2ade9ea322acc2d60c24794eadc465ff9380938fca4c932d09e0b25f1c28
-JSIGN_URL="https://cdn.alchemyrpg.com/build-tools/jsign-${JSIGN_VERSION}.jar"
+JSIGN_URL="https://github.com/ebourg/jsign/releases/download/${JSIGN_VERSION}/jsign-${JSIGN_VERSION}.jar"
 
 SCRIPT_DIR=$(cd "$(dirname "$0")" && pwd)
 DEST="${SCRIPT_DIR}/../jsign-${JSIGN_VERSION}.jar"

@@ -62,5 +62,4 @@ const authBridge = {
 };
 
 contextBridge.exposeInMainWorld('caelixAuth', authBridge);
-contextBridge.exposeInMainWorld('alchemyAuth', authBridge);
 

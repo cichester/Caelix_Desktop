@@ -27,7 +27,7 @@ const WINDOW_BACKGROUND_COLOR = '#0C0B10';
 // global reference to mainWindow (necessary to prevent window from being garbage collected)
 let mainWindow: BrowserWindow | null;
 
-// A second launch (e.g. from clicking an alchemyrpg:// deep link while the
+// A second launch (e.g. from clicking a caelix:// deep link while the
 // app is already running) should focus the existing instance instead of
 // spawning a duplicate. On macOS the OS handles this via open-url; on
 // Windows and Linux we rely on the single-instance lock + second-instance
@@ -169,7 +169,7 @@ const createMainWindow = (): BrowserWindow => {
     });
 
     window.webContents.setWindowOpenHandler(({ url }) => {
-        // Allow modal pop-outs to open in a new Alchemy window. Other types of
+        // Allow modal pop-outs to open in a new Caelix window. Other types of
         if (url.includes('/popout/')) {
             const mainBounds = window.getBounds();
 
