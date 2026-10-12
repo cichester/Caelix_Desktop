@@ -62,7 +62,8 @@
       "target": [
         "nsis"
       ],
-      "icon": "icon-source/icon.png"
+      "icon": "icon-source/icon.png",
+      "artifactName": "${productName}-Setup-${version}.${ext}"
     },
     "nsis": {
       "oneClick": false,
