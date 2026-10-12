@@ -1,0 +1,49 @@
+{
+    "$schema": "./node_modules/oxlint/configuration_schema.json",
+    "plugins": ["typescript", "unicorn", "oxc", "import"],
+    "categories": {
+        "correctness": "error"
+    },
+    "env": {
+        "builtin": true,
+        "browser": true,
+        "node": true,
+        "es2024": true
+    },
+    "ignorePatterns": [
+        "node_modules",
+        "out",
+        "dist-package",
+        "build",
+        "electron-builder-dist",
+        "**/*.d.ts",
+        "electron.vite.config.js"
+    ],
+    "rules": {
+        "typescript/no-empty-interface": "off",
+        "typescript/no-inferrable-types": "off",
+        "typescript/no-wrapper-object-types": "off",
+        "typescript/no-non-null-asserted-optional-chain": "off",
+        "no-useless-escape": "off",
+        "no-unused-expressions": "off",
+        "no-extra-boolean-cast": "off",
+        "no-constant-binary-expression": "off",
+        "no-useless-catch": "off",
+        "no-unsafe-optional-chaining": "off",
+        "no-unassigned-vars": "off",
+        "no-async-promise-executor": "off",
+        "no-console": "error",
+        "no-unused-vars": [
+            "error",
+            {
+                "argsIgnorePattern": "^_",
+                "varsIgnorePattern": "^_",
+                "caughtErrorsIgnorePattern": "^(_|err$|error$|e$)"
+            }
+        ],
+        "unicorn/no-useless-spread": "off",
+        "unicorn/no-useless-fallback-in-spread": "off",
+        "unicorn/no-new-array": "off",
+        "unicorn/no-empty-file": "off"
+    }
+}
