@@ -5,6 +5,11 @@ Tutte le modifiche rilevanti di questo progetto sono documentate in questo file.
 Il formato è basato su [Keep a Changelog](https://keepachangelog.com/it/1.0.0/)
 e rispetta il [Semantic Versioning](https://semver.org/lang/it/).
 
+## [1.0.3] - 2026-10-12
+
+### Rimosso
+- Rimossi tutti i file residui, script di firma e riferimenti legacy ad Alchemy dal codice e dalla documentazione.
+
 ## [1.0.2] - 2026-10-12
 
 ### Aggiunto
