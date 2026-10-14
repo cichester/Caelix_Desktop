@@ -24,6 +24,10 @@ contextBridge.exposeInMainWorld('clientEnvironment', {
     },
 });
 
+contextBridge.exposeInMainWorld('caelixDesktop', {
+    isDesktop: true,
+});
+
 // Buffer callback URLs that arrive from main before the renderer has called
 // onDiscordCallbackUrl, so deep links delivered during page load or during
 // a re-subscription gap are not lost. The renderer drains the buffer the
